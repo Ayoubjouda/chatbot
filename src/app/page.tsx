@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { Dialog } from "@headlessui/react";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import foodImage from "../../public/meal.jpg";
 const inter = Inter({ subsets: ["latin"] });
 const navigation = [
   { name: "Fantasy", href: "#" },
@@ -113,7 +114,7 @@ export default function Home() {
             </div>
             <div className="flow-root mt-16 sm:mt-24">
               <div className="relative p-2 -m-2 rounded-xl bg-gray-900/5 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
-                <img src="/meal.jpg" alt="App screenshot" className="rounded-md shadow-2xl ring-1 ring-gray-900/10" />
+                <Image src={foodImage} alt="Meal Picture" className="rounded-md shadow-2xl ring-1 ring-gray-900/10" placeholder="blur" />
               </div>
             </div>
           </div>
