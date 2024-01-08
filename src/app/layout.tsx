@@ -1,9 +1,10 @@
-import Chat from "./components/Chat";
 import Providers from "./components/Providers";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Inter,Play,Bungee_Spice } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
+const Bunge = Bungee_Spice({ subsets: ["latin"] ,weight:["400"],variable:"--bunge"});
+
 
 export const metadata = {
   title: "Foody Chat Buddy",
@@ -14,8 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <Providers>
-        <body className={inter.className}>
-          <Chat />
+        <body className={`${inter.className} ${Bunge.variable}`}>
 
           {children}
         </body>

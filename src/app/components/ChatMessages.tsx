@@ -13,7 +13,7 @@ const ChatMessages: FC<ChatMessagesProps> = ({ className, ...props }) => {
     <div
       {...props}
       className={cn(
-        "flex flex-col-reverse gap-3 overflow-y-auto scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch",
+        "flex flex-col-reverse gap-3 overflow-y-auto scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch ",
         className
       )}
     >
@@ -34,7 +34,7 @@ const ChatMessages: FC<ChatMessagesProps> = ({ className, ...props }) => {
               >
                 <p
                   className={cn("px-4 py-2 rounded-xl", {
-                    "bg-blue-600 text-white": message.isUserInput,
+                    "bg-black text-white": message.isUserInput,
                     "bg-gray-200 text-gray-900": !message.isUserInput,
                   })}
                 >

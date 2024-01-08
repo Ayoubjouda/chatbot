@@ -46,6 +46,9 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      fontFamily: {
+        bunge:"var(--bunge)"
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -65,6 +68,10 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      backgroundImage: {
+        'heroimage': "url('/ee.png')",
+        'footer-texture': "url('/img/footer-texture.png')",
+      }
     },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/forms")],

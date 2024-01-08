@@ -73,8 +73,8 @@ const ChatInput: FC<ChatInputProps> = ({ className, ...props }) => {
     },
   });
   return (
-    <div {...props} className={cn("border-t border-zinc-300")}>
-      <div className="relative flex-1 mt-4 overflow-hidden border-none rounded-lg outline-none">
+    <div {...props} className={cn("border-t border-zinc-300 rounded-lg")}>
+      <div className="relative flex-1 mt-4 overflow-hidden rounded-lg outline-none ">
         <TextareaAutosize
           ref={textareaRef}
           rows={2}
@@ -95,18 +95,15 @@ const ChatInput: FC<ChatInputProps> = ({ className, ...props }) => {
           disabled={isLoading}
           autoFocus
           placeholder="Write a message"
-          className="block w-full border-0 resize-none peer disabled:opacity-50 pr-14 bg-zinc-100 py-1.5 text-gray-900 focus:ring-0 text-sm leading-6"
+          className="block w-full rounded-xl border-0 resize-none peer disabled:opacity-50 pr-14 bg-black py-1.5 text-white focus:ring-0  placeholder:text-gray-400 text-sm leading-6  "
         />
-        <div className="absolute inset-y-0 right-0 flex py-1.5 pr-1.5">
-          <kbd className="inline-flex items-center px-1 font-sans text-xs text-gray-400 bg-white border border-gray-200 rounded">
-            {isLoading ? <Loader2 className="w-3 h-3 animate-spin" /> : <CornerDownLeft className="w-3 h-3" />}
+        <div className="absolute inset-y-0 border-0 right-0 flex py-1.5 pr-1.5  rounded-full " >
+          <kbd className="inline-flex items-center px-1 font-sans text-xs rounded-lg bg-blacktext-gray-400">
+            {isLoading ? <Loader2 className="w-3 h-3 animate-spin" /> : <CornerDownLeft className="w-3 h-3 " />}
           </kbd>
         </div>
 
-        <div
-          className="absolute inset-x-0 bottom-0 border-t border-gray-300 peer-focus:border-t-2 peer-focus:border-indigo-600"
-          aria-hidden="true"
-        />
+       
       </div>
     </div>
   );
